@@ -1,0 +1,21 @@
+//? == Index SCSS ==
+
+@import './styles/normalize';
+@import './styles/fonts';
+@import './styles/vars';
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 75px;
+}
+
+body {
+	font-family: 'CentraNo2', sans-serif;
+	font-weight: 400;
+	color: #fff;
+	background-color: #121212;
+
+	position: relative;
+
+	overflow-x: hidden;
+}

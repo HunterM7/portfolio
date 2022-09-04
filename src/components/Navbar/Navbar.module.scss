@@ -1,0 +1,105 @@
+//? == Navbar ==
+
+@import '../../styles/vars';
+
+.wrapper {
+	width: 100%;
+
+	transition: background-color $trans;
+
+	&.scrolled {
+		background-color: red;
+	}
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	height: 30px;
+
+	svg {
+		height: 100%;
+	}
+}
+
+.links {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	column-gap: 56px;
+
+	margin-right: 44px;
+
+	&__link {
+		font-size: 20px;
+		font-weight: 400;
+		letter-spacing: 0.04rem;
+
+		opacity: 0.75;
+
+		transition: $trans-fast;
+
+		&.active {
+			opacity: 1;
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+.social {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	column-gap: 6px;
+
+	margin-right: 26px;
+
+	&__link {
+		width: 44px;
+		height: 44px;
+
+		border-radius: 50%;
+		border: 1px solid $Gray;
+		background-color: rgba($Gray, 0.1);
+
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+
+		svg {
+			height: 18px;
+
+			path {
+				fill: $White;
+			}
+		}
+	}
+}
+
+.connectBtn {
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 0.05rem;
+	color: $White;
+
+	padding: 22px 38px;
+
+	border: 1px solid $White;
+}
