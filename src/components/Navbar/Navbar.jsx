@@ -28,9 +28,9 @@ const Navbar = () => {
 			window.removeEventListener('scroll', onScroll)
 	}, [])
 
-	const onUpdateActiveLink = (value) => {
-		setActiveLink(value)
-	}
+	// const onUpdateActiveLink = (value) => {
+	// 	setActiveLink(value)
+	// }
 
 	return (
 		<div
@@ -101,7 +101,7 @@ const Navbar = () => {
 						</a>
 					</div>
 					<button className={styles.connectBtn}>
-						Let's connect
+						<span>Let's connect</span>
 					</button>
 				</div>
 			</div>

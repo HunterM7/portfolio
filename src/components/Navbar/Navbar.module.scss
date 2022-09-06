@@ -74,6 +74,8 @@
 		width: 44px;
 		height: 44px;
 
+		position: relative;
+
 		border-radius: 50%;
 		border: 1px solid $Gray;
 		background-color: rgba($Gray, 0.1);
@@ -83,8 +85,41 @@
 		justify-content: center;
 		align-items: center;
 
+		&::before {
+			content: '';
+			width: 100%;
+			height: 100%;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			border-radius: 50%;
+			background-color: $White;
+
+			transform: scale(0);
+
+			transition: $trans;
+		}
+
+		&:hover {
+			&::before {
+				transform: scale(1);
+			}
+
+			svg {
+				path {
+					fill: $Dark;
+
+					transition: $trans;
+				}
+			}
+		}
+
 		svg {
 			height: 18px;
+
+			z-index: 1;
 
 			path {
 				fill: $White;
@@ -99,7 +134,35 @@
 	letter-spacing: 0.05rem;
 	color: $White;
 
-	padding: 22px 38px;
+	padding: 18px 34px;
+
+	position: relative;
 
 	border: 1px solid $White;
+
+	transition: $trans;
+
+	&::before {
+		content: '';
+		display: block;
+		width: 0%;
+		height: 100%;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+
+		background-color: $White;
+
+		transition: $trans;
+	}
+
+	&:hover {
+		color: $Dark;
+
+		&::before {
+			width: 100%;
+		}
+	}
 }
