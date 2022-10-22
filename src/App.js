@@ -1,5 +1,6 @@
 import './App.scss'
 import Navbar from './components/Navbar/Navbar'
+import Home from './components/Home/Home'
 
 function App() {
 	return (
@@ -8,26 +9,7 @@ function App() {
 				<Navbar />
 			</div>
 			<div className='container'>
-				<h1 style={{ fontSize: 120 }}>TEST</h1>
-				<h1 style={{ fontSize: 120 }}>TEST</h1>
-				<h1 style={{ fontSize: 120 }}>TEST</h1>
-				<h1 style={{ fontSize: 120 }}>TEST</h1>
-				<h1 style={{ fontSize: 120 }}>TEST</h1>
-				<h1 style={{ fontSize: 120 }}>TEST</h1>
-				<h1 style={{ fontSize: 120 }}>TEST</h1>
-				<h1 style={{ fontSize: 120 }}>TEST</h1>
-				<h1 style={{ fontSize: 120 }}>TEST</h1>
-				<h1 style={{ fontSize: 120 }}>TEST</h1>
-				<h1 style={{ fontSize: 120 }}>TEST</h1>
-				<h1 style={{ fontSize: 120 }}>TEST</h1>
-				<h1 style={{ fontSize: 120 }}>TEST</h1>
-				<h1 style={{ fontSize: 120 }}>TEST</h1>
-				<h1 style={{ fontSize: 120 }}>TEST</h1>
-				<h1 style={{ fontSize: 120 }}>TEST</h1>
-				<h1 style={{ fontSize: 120 }}>TEST</h1>
-				<h1 style={{ fontSize: 120 }}>TEST</h1>
-				<h1 style={{ fontSize: 120 }}>TEST</h1>
-				<h1 style={{ fontSize: 120 }}>TEST</h1>
+				<Home />
 			</div>
 		</div>
 	)

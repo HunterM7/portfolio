@@ -17,20 +17,15 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .logo {
-	height: 30px;
+	height: 46px;
 
-	svg {
-		height: 100%;
-	}
-}
-
-.links {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
+	font-weight: 700;
 }
 
 .nav {
@@ -38,27 +33,7 @@
 	flex-direction: row;
 	align-items: center;
 
-	column-gap: 56px;
-
-	margin-right: 44px;
-
-	&__link {
-		font-size: 20px;
-		font-weight: 400;
-		letter-spacing: 0.04rem;
-
-		opacity: 0.75;
-
-		transition: $trans-fast;
-
-		&.active {
-			opacity: 1;
-		}
-
-		&:hover {
-			opacity: 1;
-		}
-	}
+	column-gap: 32px;
 }
 
 .social {
@@ -109,7 +84,7 @@
 
 			svg {
 				path {
-					fill: $Dark;
+					fill: $BG;
 
 					transition: $trans;
 				}
@@ -159,7 +134,7 @@
 	}
 
 	&:hover {
-		color: $Dark;
+		color: $BG;
 
 		&::before {
 			width: 100%;

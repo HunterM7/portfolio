@@ -1,0 +1,21 @@
+//? == Navbar Item ==
+
+@import '../../../styles/vars';
+
+.link {
+	font-size: 16px;
+	font-weight: 400;
+	color: $Gray;
+
+	transition: $trans-fast;
+
+	&.active {
+		font-weight: 500;
+		color: $White;
+	}
+
+	&:hover {
+		font-weight: 500;
+		color: $White;
+	}
+}

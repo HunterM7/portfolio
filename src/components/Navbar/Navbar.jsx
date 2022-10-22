@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
+import NavbarItem from './NavbarItem/NavbarItem'
+
 import styles from './Navbar.module.scss'
-import {
-	facebookLogo,
-	instagramLogo,
-	linkedInLogo,
-	logo,
-} from '../../assets/icons'
 
 const Navbar = () => {
 	// Active Link
@@ -28,10 +24,16 @@ const Navbar = () => {
 			window.removeEventListener('scroll', onScroll)
 	}, [])
 
-	// const onUpdateActiveLink = (value) => {
-	// 	setActiveLink(value)
-	// }
-	//
+	// Links
+	const links = ['home', 'works', 'about-me', 'contacts']
+
+	const linksList = links.map((el) => (
+		<NavbarItem
+			href={el}
+			activeLink={activeLink}
+			setActiveLink={setActiveLink}
+		/>
+	))
 
 	return (
 		<div
@@ -41,70 +43,8 @@ const Navbar = () => {
 		`}
 		>
 			<div className={`container ${styles.container}`}>
-				<div className={styles.logo}>{logo}</div>
-				<div className={styles.links}>
-					<div className={styles.nav}>
-						<a
-							href='#home'
-							className={`
-							${styles.nav__link}
-							${activeLink === 'home' ? styles.active : ''}
-						`}
-							onClick={() => setActiveLink('home')}
-						>
-							Home
-						</a>
-						<a
-							href='#skills'
-							className={`
-							${styles.nav__link}
-							${activeLink === 'skills' ? styles.active : ''}
-						`}
-							onClick={() => setActiveLink('skills')}
-						>
-							Skills
-						</a>
-						<a
-							href='#projects'
-							className={`
-							${styles.nav__link}
-							${activeLink === 'projects' ? styles.active : ''}
-						`}
-							onClick={() => setActiveLink('projects')}
-						>
-							Projects
-						</a>
-					</div>
-					<div className={styles.social}>
-						<a
-							className={styles.social__link}
-							target='_blank'
-							rel='noreferrer'
-							href='https://ru.wikipedia.org/wiki/LinkedIn'
-						>
-							{linkedInLogo}
-						</a>
-						<a
-							className={styles.social__link}
-							target='_blank'
-							rel='noreferrer'
-							href='https://ru.wikipedia.org/wiki/Facebook'
-						>
-							{facebookLogo}
-						</a>
-						<a
-							className={styles.social__link}
-							target='_blank'
-							rel='noreferrer'
-							href='https://en.wikipedia.org/wiki/Instagram'
-						>
-							{instagramLogo}
-						</a>
-					</div>
-					<button className={styles.connectBtn}>
-						<span>Let's connect</span>
-					</button>
-				</div>
+				<p className={styles.logo}>Logo</p>
+				<nav className={styles.nav}>{linksList}</nav>
 			</div>
 		</div>
 	)

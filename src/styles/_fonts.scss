@@ -1,19 +1,25 @@
 //? == Fonts ==
 
 @font-face {
-	font-family: 'CentraNo2';
+	font-family: 'Fira Code';
 	font-weight: 400;
-	src: url(../assets/fonts/CentraNo2-Book.ttf) format('truetype');
+	src: url(../assets/fonts/FiraCode-Regular.ttf) format('truetype');
 }
 
 @font-face {
-	font-family: 'CentraNo2';
+	font-family: 'Fira Code';
 	font-weight: 500;
-	src: url(../assets/fonts/CentraNo2-Medium.ttf) format('truetype');
+	src: url(../assets/fonts/FiraCode-Medium.ttf) format('truetype');
 }
 
 @font-face {
-	font-family: 'CentraNo2';
+	font-family: 'Fira Code';
+	font-weight: 600;
+	src: url(../assets/fonts/FiraCode-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'Fira Code';
 	font-weight: 700;
-	src: url(../assets/fonts/CentraNo2-Bold.ttf) format('truetype');
+	src: url(../assets/fonts/FiraCode-Bold.ttf) format('truetype');
 }
