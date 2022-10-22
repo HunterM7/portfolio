@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
 
 import styles from './Home.module.scss'
-import { astronaut } from '../../assets/icons'
+import { astronaut } from '../../../assets/icons'
 import { useEffect } from 'react'
+import Button from '../../Button/Button'
 
 const Home = () => {
 	const toRotate = [
-		'Frontend Developer',
-		'Web Designer',
-		'UI/UX Designer',
+		'Frontend-разработчик',
+		'Веб-дизайнер',
+		'UI/UX-дизайнер',
 	]
 	const period = 2000
 	const [delta, setDelta] = useState(
@@ -28,7 +29,7 @@ const Home = () => {
 		setText(updatedText)
 
 		if (isDeleting) {
-			setDelta(Math.random() * (260 - 40) + 40)
+			setDelta(Math.random() * (260 - 60) + 60)
 		}
 
 		if (!isDeleting && updatedText === fullText) {
@@ -52,23 +53,17 @@ const Home = () => {
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.infobox}>
-				<p className={styles.suptitle}>
-					Welcome to my Portfolio
-				</p>
 				<p className={styles.title}>
-					{`Hi! I'm Tony and I'm a ${text}!`}
+					{`Привет! Меня зовут Антон и я ${text}!`}
 				</p>
 				<p className={styles.desc}>
-					Lorem ipsum dolor, sit amet consectetur
-					adipisicing elit. Repudiandae laudantium, nostrum
-					officiis autem tempora nulla impedit quaerat eaque
-					facilis quam odit voluptatibus a eos adipisci
-					ipsa! Eos veniam dicta deserunt quae eligendi odit
-					neque quaerat ea, maiores sed itaque iusto?
+					Я создаю потрясающие сайты, где технологии
+					встречаются с креативностью
 				</p>
 				<button className={styles.btn}>
 					Let's Connect
 				</button>
+				<Button title='Contact me!' primary />
 			</div>
 			<div className={styles.img}>{astronaut}</div>
 		</div>

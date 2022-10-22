@@ -18,4 +18,9 @@
 		font-weight: 500;
 		color: $White;
 	}
+
+	&::before {
+		content: '#';
+		color: $Primary;
+	}
 }

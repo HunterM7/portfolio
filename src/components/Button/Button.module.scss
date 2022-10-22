@@ -1,0 +1,22 @@
+//? == Button ==
+@import '../../styles/vars';
+
+.wrapper {
+	padding: 8px 16px;
+
+	border: 1px solid $Gray;
+
+	background-color: transparent;
+
+	&:hover {
+		background-color: rgba($Gray, 0.2);
+	}
+
+	&.active {
+		border-color: $Primary;
+
+		&:hover {
+			background-color: rgba($Primary, 0.2);
+		}
+	}
+}

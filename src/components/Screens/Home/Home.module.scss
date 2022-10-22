@@ -1,16 +1,16 @@
 //? == Home ==
 
-@import '../../styles/vars';
+@import '../../../styles/vars';
 
 .wrapper {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	column-gap: 60px;
+	column-gap: 18px;
 
 	min-height: 100vh;
 
-	padding: 120px 0 20px;
+	padding: 20px 0;
 }
 
 .infobox {
@@ -19,22 +19,9 @@
 	align-items: flex-start;
 }
 
-.suptitle {
-	font-size: 20px;
-	font-weight: 700;
-	letter-spacing: 0.05rem;
-
-	padding: 14px 18px;
-	margin-bottom: 16px;
-
-	border: 1px solid $Gray;
-	background-image: $MainGradient;
-}
-
 .title {
-	font-size: 66px;
-	font-weight: 700;
-	letter-spacing: 0.05rem;
+	font-size: 32px;
+	font-weight: 600;
 
 	margin-bottom: 20px;
 }
